@@ -4,11 +4,12 @@ import (
 	"bufio"
 	"bytes"
 	"fmt"
-	"github.com/spf13/viper"
 	"io/ioutil"
-	"github.com/joakimofv/find"
 	"os"
 	"strings"
+
+	"github.com/joakimofv/find"
+	"github.com/spf13/viper"
 )
 
 func replace(args []string) (e error) {
