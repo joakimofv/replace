@@ -16,8 +16,7 @@ var rootCmd = &cobra.Command{
 	Use:   "replace <old pattern> <new pattern> [files]",
 	Short: "text pattern replacer for text files",
 	Long: `Replace all found instances of the first argument
-with the second argument. '?' is any single character and '*'
-is any number of characters.
+with the second argument. '*' is any number of characters.
 
 If no files are given then all files under the current directory,
 recursively descending into subdirectories, will be taken.`,
