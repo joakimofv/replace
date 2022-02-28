@@ -18,7 +18,10 @@ func replace(args []string) (e error) {
 		// Don't replace line, remove completely
 		newPattern = "REMOVE"
 	}
-	newPattern = strings.Replace(newPattern, "\\n", "\n", -1)
+	tmpMarker := "ewfjekferguergiujretgkltrugiroeufoidrufv"
+	newPattern = strings.ReplaceAll(newPattern, "\\\\n", tmpMarker)
+	newPattern = strings.ReplaceAll(newPattern, "\\n", "\n")
+	newPattern = strings.ReplaceAll(newPattern, tmpMarker, "\\n")
 	candidateFiles := find.Files(find.LongestFixedPart(oldPattern), args[2:])
 	for _, file := range candidateFiles {
 		if err := findAndReplace(file, oldPattern, newPattern); err != nil {
