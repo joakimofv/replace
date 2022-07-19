@@ -8,7 +8,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/joakimofv/find"
+	"github.com/joakimofv/find/v2"
 	"github.com/spf13/viper"
 )
 
